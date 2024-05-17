@@ -21,9 +21,7 @@ jobs:
       with:
         node-version: '20'
     - name: Check Package.json
-      run: |
-        ls -l package.json
-
+      run: ls -l /usr/src/app/package.json
     - name: Install dependencies
       run: npm install
       working-directory: app
