@@ -5,7 +5,7 @@ FROM node:20.12.2 AS build
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package.json package-lock.json ./
+COPY . .
 
 # Install dependencies
 RUN npm install
