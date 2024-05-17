@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+    AWS_REGION: us-east-1
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,15 +25,12 @@ jobs:
       run: npm install
       working-directory: app
 
-    - name: Load environment variables
-      run: |
-        export $(cat env.list | xargs)
+
 
     - name: Log in to Amazon ECR
       id: ecr_login
       uses: aws-actions/amazon-ecr-login@v1
-      with:
-        region: us-east-1
+      
   
 
     - name: Build, tag, and push Docker image to ECR
