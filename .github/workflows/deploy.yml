@@ -20,11 +20,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '20'
-    - name: Check Package.json
-      run: ls -l /usr/src/app/package.json
+
     - name: Install dependencies
       run: npm install
-      working-directory: app
+      working-directory: ./app
       
 
     - name: Configure AWS credentials
