@@ -19,9 +19,8 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: |
-        cd app
-        npm install
+      run: npm install
+      working-directory: app
 
     - name: Load environment variables
       run: |
