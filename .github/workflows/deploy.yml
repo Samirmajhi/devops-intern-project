@@ -23,6 +23,10 @@ jobs:
         cd app
         npm install
 
+    - name: Set AWS region
+      run: |
+        echo "::set-env name=AWS_REGION::us-east-1"
+
     - name: Log in to Amazon ECR
       id: ecr_login
       uses: aws-actions/amazon-ecr-login@v1
