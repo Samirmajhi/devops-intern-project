@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AWS_REGION: us-east-2
+  AWS_REGION: us-east-1
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
 
     - name: Build, tag, and push Docker image to ECR
       env:
-        ECR_REGISTRY: ${{ steps.ecr_login.outputs.registry }}
+        ECR_REGISTRY: 851725219141.dkr.ecr.us-east-1.amazonaws.com/hello-world
         ECR_REPOSITORY: hello-world
         IMAGE_TAG: latest
       run: |
