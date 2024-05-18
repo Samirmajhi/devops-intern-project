@@ -23,7 +23,7 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./app
+      working-directory: .
       
 
     - name: Configure AWS credentials
